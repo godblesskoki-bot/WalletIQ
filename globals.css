@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-900 to-black text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-slate-800/50 backdrop-blur-lg border border-slate-700 rounded-2xl p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-[#f7931a] hover:bg-[#e8870f] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 hover:scale-105;
+  }
+  
+  .input-field {
+    @apply bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#f7931a] focus:border-transparent transition-all;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
